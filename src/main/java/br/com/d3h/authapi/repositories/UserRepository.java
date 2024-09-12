@@ -1,7 +1,10 @@
 package br.com.d3h.authapi.repositories;
 
-import br.com.d3h.authapi.domain.user.Usuario;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import br.com.d3h.authapi.domain.user.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends MongoRepository<Usuario, String> {
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<User, String> {
+    Optional<User> findByEmail(String email);
 }
