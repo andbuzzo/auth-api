@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: authapi
+  datasource:
+    url: jdbc:mysql://localhost:3306/authuser?useSSL=false&serverTimezone=UTC
+    username: root
+    password: D3hs2l1h@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+api:
+  security:
+    token:
+      secret: my-secret-key-teste
